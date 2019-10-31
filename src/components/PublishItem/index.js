@@ -37,6 +37,15 @@ export default class PublishItem extends Component {
     redirect: false,
   };
 
+  // componentDidMount() {
+  //   const newState = {
+  //     state: this.props.state,
+  //     color: this.props.stateColor
+  //   }
+
+  //   this.setState({currentState:newState})
+  // }
+
   setRedirect = () => {
     this.setState({ redirect: true });
   };

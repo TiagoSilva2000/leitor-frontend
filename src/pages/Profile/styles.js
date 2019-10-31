@@ -6,29 +6,52 @@ export const ProfilePic = styled.img`
   max-height: 200px;
   max-width: 200px;
   border: 1px solid #eee;
-  border-radius: 10%;
+  border-radius: 50%;
   display: flex;
 `;
 
 export const ImageBox = styled.div`
-  margin: 60px 20px;
+  margin: 10px 20px 20px 20px;
   padding: 15px;
-  border: 0.5px solid #eee;
-  width: 250px;
+  width: 300px;
   height: 400px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
 
   button {
-    width: 100%;
-    height: 30px;
-    border-radius: 8px;
-    background-color: transparent;
-    color: #335;
-    font-weight: bold;
-    font-size: 18px;
+    width: 200px;
+    height: 42px;
+    border: 0px hidden transparent;
+    border-radius: 15px;
+    font-size: 16px;
+    font-weight: lighter;
+    transition: 0.20s;
+    background-color: #039DE5;
+    color: #FCF2FF;
+
+    &:hover {
+      font-weight: bold;
+      background-color: #0490d1;
+    }
+  }
+
+  p {
+    width: 200px;
+    /* border-top: 1px solid #b2e7c8; */
+    border-top: 1px solid #e6bad2;    
+    padding-top: 10px;
+    text-align: left;
+    color: black;
+    span {
+      color: #8989ff;
+      font-weight: bold;
+    }
+  }
+
+  #answered {
+    color: #4eff4e;
   }
 `;
 
@@ -47,7 +70,7 @@ export const ConfigsMenu = styled.div`
   word-break: break-all;
 
   span {
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid #e6bad2;
     width: 90%;
     padding: 10px 0;
     margin-bottom: 3px;
@@ -67,12 +90,8 @@ export const ConfigsMenu = styled.div`
   }
 `;
 
-export const ProfileList = styled.ul`
-  list-style: none;
-  li {
-    max-width: 300px;
-    display: inline-block;
-  }
+export const ProfileList = styled.div`
+  margin-right: 80px;
 `;
 
 export const Row = styled.div`

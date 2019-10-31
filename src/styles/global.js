@@ -13,7 +13,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: #335;
+    /* background-color: #fff; */
+    background-color: #abcbd1;
     display: flex;
     justify-content: center;
     -webkit-font-smoothing: antialiased !important;
@@ -21,12 +22,18 @@ export default createGlobalStyle`
 
   body, input, button {
     color: #222;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: monospace;
     font-size: 14px;
   }
 
   button {
+    outline: none;
     cursor: pointer;
+  }
+
+  #root {
+    width: 100%;
   }
 
 `;
