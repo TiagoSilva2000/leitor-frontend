@@ -4,7 +4,8 @@ import {Container} from '../../components/Container/index'
 import {InputForm} from '../../components/InputForm/styles'
 import { FormDiv, ButtonHolder, FormWrapper, AccountContainer } from './styles';
 import SiteHeader from '../../components/SiteHeader';
-
+import BookIcon from '../../Images/bookIcon2.png'
+import { DivIMG} from '../Main/styles'
 
 export default class LogAccounnt extends Component {
   constructor () {
@@ -81,6 +82,7 @@ export default class LogAccounnt extends Component {
             </form>
           </FormDiv>
         </FormWrapper>
+        {/* <DivIMG src={BookIcon} alt="Ícone de livro"/> */}
       </AccountContainer>
     </Container>
     )

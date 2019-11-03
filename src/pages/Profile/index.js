@@ -3,7 +3,7 @@
 import React, { Component } from 'react';
 import { Container } from '../../components/Container';
 import Picture from '../../Images/profile.jpg';
-import { ProfilePic, ImageBox, ProfileList} from './styles';
+import { ProfilePic, ImageBox, ProfileList, Wrapper} from './styles';
 import InfoItem from '../../components/InfoItem';
 import {DefaultFlexDiv} from '../../components/DefaultFlexDiv/styles'
 import {ButtonWrapper, GenButton} from '../../components/GenButton/styles'
@@ -27,18 +27,18 @@ export default class Profile extends Component {
   render() {
     const { userType } = this.state;
     return (
-      <Container  bgColor="inherit">
+      <Container bgColor="inherit">
         {this.doRedirect()}
-        <DefaultFlexDiv
+        <Wrapper
           borderColor="#ed5fad"
           flexDir="column"
-          bgColor="#eeeeee"
-          style={{minWidth:"905px"}}>
+          correctWidth="70%"
+          bgColor="#eeeeee">
           <ButtonWrapper style={{maxHeight:"70px"}}>
             <GenButton disabled> Perfil </GenButton>
             <GenButton onClick={() => this.setRedirect()}> Pautas </GenButton>
           </ButtonWrapper>
-          <DefaultFlexDiv>
+          <DefaultFlexDiv correctWidth="100%">
             <ImageBox>
               <ProfilePic src={Picture} />
               <button type="button"> Alterar Perfil </button>
@@ -54,7 +54,7 @@ export default class Profile extends Component {
               <InfoItem fieldKey="Senha" fieldValue="*********" />
             </ProfileList>
           </DefaultFlexDiv>
-        </DefaultFlexDiv>
+        </Wrapper>
       </Container>
     );
   }

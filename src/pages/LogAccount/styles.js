@@ -2,21 +2,20 @@ import styled from 'styled-components'
 
 export const AccountContainer = styled.div`
   width: 50%;
-  min-height: 650px;
-  /* align-self: center; */
+  min-height: 80%;
+  padding-bottom: 10%;
   background-color: #ffffff;
+
   display: flex;
   flex: 1;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  /* border: 1px solid #eae1ed;
-  border-radius: 5px; */
 `;
 
 
 export const FormWrapper = styled.div`
-  width: 700px;
+  width: 100%;
   height: auto;
   background-color: #ffffff;
   margin-bottom: auto;
@@ -30,8 +29,8 @@ export const FormWrapper = styled.div`
 export const FormDiv = styled.div`
   border-top: 1px solid #eae1ed;
   width: 70%;
-  margin-top: 15px;
-  padding-top: 15px;
+  margin: 3% 0;
+  padding-top: 3%;
 `;
 
 export const ButtonHolder = styled.div`
@@ -40,11 +39,11 @@ export const ButtonHolder = styled.div`
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-top: 15px;
+  margin-top: 3%;
   button {
     width: 45%;
-    margin: 5px 5px;
-    margin-top: 10px;
+    margin: 2% 2%;
+    margin-top: 5%;
     &:hover {
       padding: initial;
     }

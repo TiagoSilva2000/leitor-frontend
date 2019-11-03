@@ -1,15 +1,15 @@
 import styled from 'styled-components'
 
 export const ButtonWrapper = styled.div`
-  min-width: 400px;
+  min-width: 40%;
   display: flex;
   flex: 1;
   align-items: center;
   justify-content: space-around;
   align-self: center;
   justify-self: center;
-  margin-top: 20px;
-
+  flex-wrap: wrap;
+  margin-top: 3%;
 `;
 
 

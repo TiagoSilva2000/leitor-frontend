@@ -9,5 +9,6 @@ export const Container = styled.div`
   display: flex;
   flex: 1;
   flex-direction: ${props => props.nFlexDirection || "column"};
-  justify-content: space-evenly;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `;

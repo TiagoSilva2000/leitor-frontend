@@ -13,7 +13,6 @@ export default createGlobalStyle`
   }
 
   body {
-    /* background-color: #fff; */
     background-color: #abcbd1;
     display: flex;
     justify-content: center;
@@ -22,7 +21,6 @@ export default createGlobalStyle`
 
   body, input, button {
     color: #222;
-    /* font-family: 'Times New Roman', Times, serif; */
     font-family: monospace;
     font-size: 14px;
   }

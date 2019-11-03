@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const InputForm = styled.div`
   margin: 5px;
-  width: 50%;
+  width: ${props => props.customWidth || "50%"};
 
   p, label {
     width: 200px;
@@ -12,6 +12,7 @@ export const InputForm = styled.div`
     margin-top: 20px;
   }
   input {
+    padding-left: 5px;
     background-color: ${props => props.inputColor || "#eae1ed"};
     height: 20px;
     width: 100%;
@@ -25,9 +26,15 @@ export const InputForm = styled.div`
     &:focus {
       border-color: #ff4fb0;
     }
+
+  }
+  span {
+    margin-top: 8px;
+    color: rgba(255, 39, 39, 0.5);
   }
 
   textarea {
+    padding-left: 5px;
     background-color: #eae1ed;
     resize: none;
     width: 300px;

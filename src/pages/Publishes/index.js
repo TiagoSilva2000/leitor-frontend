@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom';
 import {Container} from '../../components/Container'
 import PageSwapper from '../../components/PageSwapper'
 import PagesIndex from '../../components/PagesIndex'
-import {PubWrapper} from './styles'
+import {PubWrapper, Wrapper} from './styles'
 import {GenButton, ButtonWrapper} from '../../components/GenButton/styles'
 import {DefaultFlexDiv} from '../../components/DefaultFlexDiv/styles'
 import { Redirect } from 'react-router-dom'
@@ -12,7 +13,7 @@ const obj1 = {
   name: "Chicote na cabeça e pulo de peão.",
   status: "Enviada",
   sentDate: "19/04/2000",
-  answerDate: "15/12/2015"
+  answerDate: ""
 };
 const obj2 = {
   name: "Homem de braços com a espada na mão",
@@ -64,7 +65,7 @@ export default class Publish extends Component {
     return (
       <Container bgColor="#abcbd1">
       {this.doRedirect()}
-      <DefaultFlexDiv borderColor="#ed5fad" flexDir="column" bgColor="#eeeeee">
+      <Wrapper borderColor="#ed5fad" flexDir="column" bgColor="#eeeeee" correctWidth="80%">
         <ButtonWrapper>
           <GenButton onClick={() => this.setRedirect()}> Perfil </GenButton>
           <GenButton disabled> Pautas </GenButton>
@@ -77,7 +78,7 @@ export default class Publish extends Component {
                 <span> Criada </span>
                 <span> Respondida </span>
                 <span><button type="button" onClick={() => this.setState({formSet:!formSet})}>+</button></span>
-                <span style={{visibility:"hidden"}}> Título </span>
+                {/* <span style={{visibility:"hidden"}}> Título </span> */}
               </li>
               {pubsArray.map((pubObj) => (
                 <li key={pubObj.name} status="yellow">
@@ -85,16 +86,14 @@ export default class Publish extends Component {
                   <span> {pubObj.status} </span>
                   <span> {pubObj.sentDate ? pubObj.sentDate : "-"} </span>
                   <span> {pubObj.answerDate ? pubObj.answerDate : "-"} </span>
-                  <span>
-                    <a href="https://www.google.com"> Ver Mais! </a>
-                  </span>
+                  <span><Link to="/pautas/sobre"> Ver Mais! </Link></span>
                 </li>
               ))}
             </ul>
-          <PopupForm formSet={formSet}/>
           </PubWrapper>
+          <PopupForm formSet={formSet}/>
         <PagesIndex  nPages={pagesNum} currPage={this.state.currPage}/>
-        </DefaultFlexDiv>
+        </Wrapper>
       </Container>
     );
   }

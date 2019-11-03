@@ -11,18 +11,23 @@ export const ProfilePic = styled.img`
 `;
 
 export const ImageBox = styled.div`
-  margin: 10px 20px 20px 20px;
-  padding: 15px;
-  width: 300px;
-  height: 400px;
+  width: 40%;
+  height: 100%;
+  margin: 2% 4% 4% 4%;
+  padding: 0 3%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-
+  flex-wrap: wrap;
   button {
-    width: 200px;
-    height: 42px;
+    width: 90%;
+    height: 12%;
+    min-height: 40px;
+    min-width: 100px;
     border: 0px hidden transparent;
     border-radius: 15px;
     font-size: 16px;
@@ -38,12 +43,12 @@ export const ImageBox = styled.div`
   }
 
   p {
-    width: 200px;
-    /* border-top: 1px solid #b2e7c8; */
+    width: 100%;
+    margin-top: 3%;
     border-top: 1px solid #e6bad2;    
-    padding-top: 10px;
+    padding-top: 5%;
     text-align: left;
-    color: black;
+    color: #404040;
     span {
       color: #8989ff;
       font-weight: bold;
@@ -55,48 +60,22 @@ export const ImageBox = styled.div`
   }
 `;
 
-export const ConfigsMenu = styled.div`
-  background-color: #ddd;
-  border: 1px solid #335;
-  border-radius: 1.5px;
-  min-width: 250px;
-  min-height: 100px;
-  margin: 60px 20px;
-  max-height: 400px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  word-break: break-all;
-
-  span {
-    border-bottom: 1px solid #e6bad2;
-    width: 90%;
-    padding: 10px 0;
-    margin-bottom: 3px;
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-    align-self: center;
-    color: #335;
-  }
-  ul {
-    flex: 1;
-    list-style: none;
-    align-items: center;
-    justify-items: center;
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
 export const ProfileList = styled.div`
-  margin-right: 80px;
+  margin-right: 1%;
+  margin: 0 5%;
+  width: 35%;
 `;
 
-export const Row = styled.div`
+export const Wrapper = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  width: 70%;
+  align-self: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  background-color: #eeeeee;
+  border: 1px solid;
+  border-color: #ed5fad;
+  border-radius: 10px;
 `;
